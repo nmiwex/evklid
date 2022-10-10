@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 1800px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* header */
+
+.section-header {
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.section-header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, .1);
+}
+
+.section-header__wrapper {
+  display: flex;
+  align-items: center;
+  width: 1800px;
+  margin: auto;
+}
+
+.section-header__nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.section-header__logo {
+  margin-right: auto;
+}
+
+.nav-list__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.nav-list__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+}
+
+.section-header__search {
+  margin-left: auto;
+}
+
+/*hero*/
+
+.section-hero {
+  margin-bottom: 50px;
+}
+
+.section-hero__container {
+  position: relative;
+  padding: 100px 80px;
+  /* padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 80px; */
+  background-image: url('../img/low-angle-photo-of-balconies-2462015\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 32px;
+}
+
+.section-hero__content {
+  max-width: 837px;
+}
+
+.section-hero__heading {
+  margin-bottom: 24px;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 85px;
+  color: #fff;
+}
+
+.section-hero__text {
+  margin-bottom: 90px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+}
+
+.section__btn {
+  display: inline-block;
+  padding: 25px 39px;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 28px;
+  background: #FF9900;
+  border-radius: 16px;
+  color: #fff;
+}
+
+.section-hero__pointers {
+  position: absolute;
+  bottom: 30px;
+  right: 47.5%;
+  display: flex;
+}
+
+.section-hero__pointer {
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.section-hero__pointer:not(:first-child) {
+  opacity: .6;
+}
+
+.section-hero__pointer:last-child {
+  margin-right: 0;
+}
+
+
+/* about us */
+
+.section-about-us {
+  margin-bottom: 100px;
+}
+
+.section__heading {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.section-about__text {
+  max-width: 1235px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.section-about__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-about__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 870px;
+  background-image: url('../img/Rectangle 2.jpg');
+  background-repeat: no-repeat;
+  border-radius: 32px;
+}
+
+.section-about__left-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 32px;
+}
+
+.section-about__left-text {
+  max-width: 433px;
+  margin-right: 160px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+}
+
+.section-about__btn {
+  padding: 20px 38px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  border:3px solid #FF9900;
+  border-radius: 16px;
+  color: #fff;
+}
+
+.section-about__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-about__right-item {
+  border: 1px solid #CACACA;
+  border-radius: 32px;
+}
+
+.section-about__right-item_1 {
+  padding: 65px 118px 65px 60px;
+  margin-bottom: 32px;
+}
+
+.section-about__right-item_2 {
+  padding: 65px 120px 65px 60px;
+}
+
+.section-about__right_item1, .section-about__right_item2 {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  padding-left: 240px;
+}
+
+.section-about__right_item1 {
+  background-image: url('../img/about1.svg');
+}
+
+.section-about__right_item2 {
+  background-image: url('../img/about2.svg');
+}
+
+.section-about__right-heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.section-about__right-text {
+  max-width: 450px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+/* how do we work*/ 
+
+.section-how__heading {
+  margin-bottom: 50px;
+}
