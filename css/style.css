@@ -169,6 +169,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section__btn:hover, .section__btn:focus {
+  outline: none;
   background:var(--FFB84D);
 }
 
@@ -270,6 +271,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-about__btn:hover, .section-about__btn:focus {
   background: var(--FF9900);
+  outline: none;
 }
 
 .section-about__btn:active {
@@ -648,20 +650,21 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--E1670E);
 }
 
-.section-footer__social:hover .section-footer__svg path {
+.section-footer__social-link:hover .section-footer__svg path {
   fill: var(--FF9900);
 }
 
-.section-footer__social:focus {
+.section-footer__social-link:focus {
   padding: 49px 5px 2px 5px;
   outline: none;
   border: 2px solid var(--FF9900);
 }
 
-.section-footer__social:active .section-footer__svg path {
+.section-footer__social-link:active .section-footer__svg path {
   fill: var(--E1670E);
 }
 
 .form__input:hover, .form__input:focus, .form__input:active {
   background: #666;
+  outline: none;
 }
