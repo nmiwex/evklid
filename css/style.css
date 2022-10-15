@@ -14,9 +14,9 @@ body {
 }
 
 .container {
-  width: 1770px;
+  width: 1800px;
   margin: auto;
-  padding: 0;
+  padding: 0 15px;
 }
 
 a {
@@ -127,7 +127,7 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
 }
 
-.section-hero__container {
+.section-hero__wrapper {
   position: relative;
   padding: 100px 80px;
   background-image: url('../img/low-angle-photo-of-balconies-2462015\ 1.png');
@@ -416,6 +416,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-how__btn_treaty:hover, .section-how__btn_treaty:focus {
+  outline: none;
   background: #666;
   border-color: #666;
   color: #fff;
