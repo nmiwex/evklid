@@ -71,6 +71,26 @@ p, h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.section-header__burger:focus {
+  padding: 3px;
+  outline: none;
+  border: 2px solid var(--FF9900);
+}
+
+.section-header__burger:active .burger__svg rect {
+  fill: var(--E1670E);
+}
+
+.section-header__burger:active .burger__line_1 {
+  x: 5px;
+  width: 25px;
+}
+
+.section-header__burger:active .burger__line_2 {
+  x: 12px;
+  width: 18px;
+}
+
 .nav-list__item:not(:last-child) {
   margin-right: 85px;
 }
@@ -678,7 +698,7 @@ p, h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 413px) {
   .section-header {
     height: 69px;
     margin-bottom: 30px;
