@@ -50,21 +50,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-header__wrapper {
-  position: relative;
   display: flex;
   align-items: center;
   width: 1770px;
   margin: auto;
-}
-
-.section-header__nav-list {
-  display: flex;
-  align-items: center;
-  margin-right: 260px;
-}
-
-.section-header__logo {
-  margin-right: auto;
 }
 
 .section-header__burger {
@@ -91,6 +80,16 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 18px;
 }
 
+.section-header__logo {
+  margin-right: auto;
+}  
+
+.section-header__nav-list {
+  display: flex;
+  align-items: center;
+  margin-right: 260px;
+}  
+
 .nav-list__item:not(:last-child) {
   margin-right: 85px;
 }
@@ -100,11 +99,14 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 22px;
   color: #000;
-  transition: color .3s ease;
+  border-bottom: 2px solid #fff;
+  transition-property: color, border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease;
 }
 
 .nav-list__link:hover {
-  border-bottom: 2px solid var(--FF9900);
+  border-color: var(--FF9900);
 }
 
 .nav-list__link:focus {
@@ -115,13 +117,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .nav-list__link:active {
   color: var(--E1670E);
-  border: 2px solid var(--E1670E);
+  border-bottom: 2px solid var(--E1670E);
 }
 
 .section-header__search {
   padding: 0;
   max-height: 24px;
-  box-sizing: content-box;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -144,9 +145,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-header__search:focus {
+  padding: 2px;
   outline: none;
   border: 2px solid var(--FF9900);
-  padding: 2px;
 }
 
 /*hero*/
@@ -156,8 +157,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-hero__wrapper {
-  position: relative;
-  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 100px 80px 30px 80px;
   background-image: url('../img/low-angle-photo-of-balconies-2462015\ 1.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,6 +169,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-hero__content {
   max-width: 837px;
+  margin-bottom: 55px;
 }
 
 .section-hero__heading {
@@ -198,7 +202,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section__btn:hover, .section__btn:focus {
   outline: none;
-  background:var(--FFB84D);
+  background: var(--FFB84D);
 }
 
 .section__btn:active {
@@ -206,10 +210,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-hero__pointers {
-  position: absolute;
-  bottom: 30px;
-  right: 47.5%;
   display: flex;
+  justify-content: center;
 }
 
 .section-hero__pointer {
@@ -256,11 +258,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-about__left {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  max-width: 868px;
   background-image: url('../img/Rectangle 2.jpg');
   background-repeat: no-repeat;
   border-radius: 32px;
@@ -284,11 +284,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-about__btn {
-  max-width: 175px;
-  padding: 20px 38px;
+  padding: 17px 35px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1;
+  line-height: 20px;
   border: 3px solid var(--FF9900);
   border-radius: 16px;
   color: #fff;
@@ -312,27 +311,24 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 
-.section-about__right-item {
-  display: flex;
-  max-height: 295px;
+.section-about__right_item {
   border: 1px solid var(--CACACA);
   border-radius: 32px;
 }
 
-.section-about__right-item_1 {
-  padding: 65px 118px 65px 60px;
+.section-about__right_consultation {
+  padding: 64px 117px 64px 59px;
   margin-bottom: 32px;
 }
 
-.section-about__right-item_2 {
-  padding: 65px 120px 65px 60px;
+.section-about__right_pursuit {
+  padding: 64px 119px 64px 59px;
 }
 
 .section-about__right_item1, .section-about__right_item2 {
   padding-left: 240px;
   background-repeat: no-repeat;
   background-position: left;
-  background-size: 190px 165px contain;
 }
 
 .section-about__right_item1 {
@@ -367,20 +363,20 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
 }
 
-.section-how__list {
+.section-how__steps {
   display: flex;
   margin-bottom: 45px;
 }
 
-.section-how__list-item:not(:last-child) {
+.steps__item:not(:last-child) {
   margin-right: 86px;
 }
 
-.section-how__list-item:first-child {
+.steps__item:first-child {
   margin-right: 85px;
 }
 
-.section-how__item-step {
+.steps__link {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -388,17 +384,17 @@ p, h1, h2, h3, h4, h5, h6 {
   transition: color .3s ease;
 }
 
-.section-how__item-step:hover {
+.steps__link:hover {
   color: var(--FF9900);
 }
 
-.section-how__item-step:focus {
+.steps__link:focus {
   padding: 3px;
   outline: none;
   border: 2px solid var(--FF9900);
 }
 
-.section-how__item-step:active {
+.steps__link:active {
   color: var(--E1670E);
 }
 
@@ -423,7 +419,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-how__btn_more {
-  margin-right: 32px;
+  margin-right: 30px;
   padding: 20px 38px;
   font-weight: 700;
   font-size: 16px;
@@ -438,7 +434,7 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #000;
   border: 1px solid #000;
   border-radius: 16px;
-  transition-property: background, color;
+  transition-property: background, color, border-color;
   transition-duration: .3s;
   transition-timing-function: ease;
 }
@@ -458,10 +454,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .step__img {
   align-self: end;
-  max-height: 460px;
 }
 
-/* qyestions*/
+/* questions*/
 
 .section-questions {
   margin-bottom: 100px;
@@ -476,13 +471,14 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--CACACA);
+  transition: border-color .3s ease;
 }
 
 .section-questions__list-item:first-child {
   border-top: 1px solid var(--CACACA);
 }
 
-.section-questions__list-text {
+.section-questions__question {
   padding: 39px 0;
   font-weight: 700;
   font-size: 24px;
@@ -503,7 +499,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-color: var(--FF9900);
 }
 
-.section-questions__list-item:hover .section-questions__list-text, .section-questions__list-item:focus .section-questions__list-text {
+.section-questions__list-item:hover .section-questions__question, .section-questions__list-item:focus .section-questions__question {
   color: var(--FF9900);
 }
 
@@ -530,24 +526,24 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
-.section-footer__left {
+.section-footer__connection {
   margin-right: 349px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.section-footer__logo {
+.connection__logo {
   margin-bottom: 20px;
   width: 224px;
   height: 72px;
 }
 
-.section-footer__list {
+.connection__list {
   margin-bottom: 90px;
 }
 
-.section-footer__list-link {
+.connection__link {
   font-weight: 600;
   font-size: 18px;
   line-height: 36px;
@@ -556,16 +552,11 @@ p, h1, h2, h3, h4, h5, h6 {
   transition: color .3s ease;
 }
 
-.section-footer__social_ok {
+.connection__social_ok {
   margin-right: 22px;
-}
+}  
 
-.section-footer__social-link {
-  max-width: 60px;
-  height: 60px;
-}
-
-.section-footer__svg path {
+.social__svg path {
   transition: fill .3s ease;
 }
 
@@ -589,9 +580,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .form__input {
   width: 570px;
   margin-bottom: 25px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 24px;
+  padding: 14px 0 14px 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -653,43 +642,43 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-footer__right {
   display: flex;
+  align-items: center;
   margin-left: 236px;
   width: 363px;
 }
 
 .section-footer__text {
-  align-self: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: var(--CACACA);
 }
 
-.section-footer__list-link:hover {
+.connection__link:hover {
   color: var(--FF9900);
 }
 
-.section-footer__list-link:focus {
+.connection__link:focus {
   padding: 0 3px;
   outline: none;
   border: 2px solid var(--FF9900);
 }
 
-.section-footer__list-link:active {
+.connection__link:active {
   color: var(--E1670E);
 }
 
-.section-footer__social-link:hover .section-footer__svg path {
+.connection__social:hover .social__svg path {
   fill: var(--FF9900);
 }
 
-.section-footer__social-link:focus {
+.connection__social:focus {
   padding: 49px 5px 2px 5px;
   outline: none;
   border: 2px solid var(--FF9900);
 }
 
-.section-footer__social-link:active .section-footer__svg path {
+.connection__social:active .social__svg path {
   fill: var(--E1670E);
 }
 
@@ -698,7 +687,7 @@ p, h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-@media (max-width: 413px) {
+@media (max-width: 320px) {
   .section-header {
     height: 69px;
     margin-bottom: 30px;
