@@ -965,7 +965,7 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
   }
 
-  .section-questions__question:nth-child(-n + 2) {
+  .section-questions__question {
     max-width: 241px;
   }
   .section-questions__span {
@@ -1127,11 +1127,6 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 80px;
   }
 
-  .section__heading {
-    font-size: 48px;
-    line-height: 59px;
-  }
-
   .section-about__text {
     margin-bottom: 56px;
     font-size: 16px;
@@ -1177,5 +1172,103 @@ p, h1, h2, h3, h4, h5, h6 {
   .section-about__right_item1, .section-about__right_item2 {
     padding-left: 144px;
     background-size: 144px 99px;
+  }
+
+  /* how */ 
+
+  .section-how-do-we-work {
+    margin-bottom: 49px;
+  }
+
+  .section-how__heading {
+    line-height: 58px;
+  }
+
+  .section-how__steps {
+    margin-bottom: 50px;
+  }
+
+  .steps__item:not(:last-child) {
+    margin-right: 155px;
+  }
+
+  .steps__item:nth-child(2) {
+    margin-right: 156px;
+  }
+
+  .section-how__step {
+    padding-top: 322px;
+    background-position: top;
+    background-size: 100% 284px;
+    border-radius: 24px;
+  }
+
+  .step__text {
+    margin-bottom: 25px;
+  }
+
+  br {
+    display: none;
+  }
+
+  /* questions */ 
+  .section-questions {
+    margin-bottom: 111px;
+  }
+  
+  .section-questions__question {
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .section-questions__list-item {
+    padding: 30px 0;
+  }
+
+  .section-questions__list-item:nth-child(2) .section-questions__question, .section-questions__list-item:nth-child(3) .section-questions__question {
+    max-width: 470px;
+  }
+
+  .section-questions__list-item:nth-child(4) .section-questions__question {
+    max-width: 566px;
+  }
+
+  .section-questions__list-item:nth-child(3), .section-questions__list-item:last-child {
+    align-items: normal;
+  }
+
+  /* footer */
+  .section-footer__container {
+    flex-direction: column-reverse;
+  }
+
+  .connection__list, .section-footer__right {
+    display: none;
+  }
+
+  .form__input {
+    width: 542px;
+    padding: 14px 0 14px 24px;
+  }
+
+  .form__btn {
+    padding: 19px 38px;
+  }
+
+  .section-footer__connection {
+    margin-top: 50px;
+    margin-right: 0;
+  }
+
+  .connection__logo {
+    margin-bottom: 16px;
+  }
+
+  .connection__socials {
+    display: flex;
+  }
+
+  .connection__social_ok {
+    margin-right: 25px;
   }
 }
