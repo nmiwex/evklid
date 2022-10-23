@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Евклид</title>
@@ -51,16 +53,22 @@
   <main>
     <section class="section-hero">
       <div class="container section-hero__container">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/low-angle-photo-of-balconies-2462015 1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/hero-pic-1920-2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/hero-pic-1920-3.jpg" alt=""></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
         <div class="section-hero__wrapper">
           <div class="section-hero__content">
             <h2 class="section-hero__heading">Проектные решения любой сложности</h2>
             <p class="section-hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
             <a href="#" class="section__btn section-hero__btn">Заказать расчёт</a>
-          </div>
-          <div class="section-hero__pointers">
-            <div class="section-hero__pointer"></div>
-            <div class="section-hero__pointer"></div>
-            <div class="section-hero__pointer"></div>
           </div>
         </div>
       </div>
@@ -240,5 +248,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
