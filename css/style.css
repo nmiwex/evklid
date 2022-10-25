@@ -382,47 +382,77 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
 }
 
-.section-how__steps {
+.section-how__tabs {
   display: flex;
   margin-bottom: 45px;
 }
 
-.steps__item:not(:last-child) {
-  margin-right: 86px;
-}
-
-.steps__item:first-child {
-  margin-right: 85px;
-}
-
-.steps__link {
+.tabs__step {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000;
+  cursor: pointer;
   transition: color .3s ease;
 }
 
-.steps__link:hover {
+.tabs__active {
+  color: var(--E1670E);
+}
+
+.tabs__step:not(:last-child) {
+  margin-right: 86px;
+}
+
+.tabs__step:first-child {
+  margin-right: 85px;
+}
+
+.tabs__step:hover {
   color: var(--FF9900);
 }
 
-.steps__link:focus {
+.tabs__step:focus {
   padding: 3px;
   outline: none;
   border: 2px solid var(--FF9900);
 }
 
-.steps__link:active {
+.tabs__step:active {
   color: var(--E1670E);
+}
+
+.section-how__content {
+  position: relative;
+  min-height: 470px;
 }
 
 .section-how__step {
   display: flex;
   flex-direction: column;
-  background-image: url('../img/how-step1.jpg');
+  /* background-image: url('../img/how-step1.jpg');
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right bottom; */
+}
+
+.step__content {
+  display: none;
+}
+
+.step__content_active {
+  display: block;
+}
+
+.step__img-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.step__content_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .step__title {
@@ -438,6 +468,11 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+}
+
+.section-how__buttons {
+  position: absolute;
+  bottom: 0;
 }
 
 .section-how__btn_more {
@@ -929,26 +964,35 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
   }
 
-  .section-how__steps {
+  .section-how__tabs {
     max-width: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     justify-content: space-between;
   }
 
-  .steps__item:not(:last-child) {
+  .tabs__step:not(:last-child) {
     margin-right: 0;
   }
 
-  .steps__link {
+  .tabs__step {
     font-size: 14px;
     line-height: 17px;
     white-space: nowrap;
   }
 
-  .section-how__step {
-    padding-top: 176px;
-    background-position: top;
-    background-size: 100% 160px;
+  .step__content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .step__img-container {
+    position: static;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 160px;
+  }
+
+  .step__content_img {
     border-radius: 16px;
   }
 
@@ -965,6 +1009,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   .section-how__buttons {
+    position: static;
     display: flex;
   }
 
@@ -1096,7 +1141,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 768px) {
   .container {
     width: 100%;
     padding: 0 50px;
@@ -1134,13 +1179,38 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 35px;
   }
 
-  .section-hero__wrapper {
-    padding: 160px 40px 30px 40px;
+  .swiper {
+    max-height: 662px;
+    height: 662px;
     border-radius: 24px;
   }
 
+  .swiper-slide {
+    /* max-width: 383px; */
+    max-height: 662px;
+  }
+
+  .swiper-slide img {
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .section-hero__content {
-    margin-bottom: 115px;
+    max-width: 588px;
+  }
+
+  .section-hero__wrapper {
+    bottom: 160px;
+    left: 0;
+    right: 0;
+    max-width: 668px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding: 160px 40px 0 40px;
+    border-radius: 24px;
   }
 
   .section-hero__heading {
@@ -1218,33 +1288,47 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 49px;
   }
 
+  .step__content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .section-how__heading {
     line-height: 58px;
   }
 
-  .section-how__steps {
+  .section-how__tabs {
     max-width: 100%;
     margin-bottom: 50px;
     justify-content: space-between;
   }
 
-  .steps__item:not(:last-child) {
+  .tabs__step:not(:last-child) {
     margin-right: 0;
   }
 
-  .steps__item:nth-child(2) {
+  .tabs__step:nth-child(2) {
     margin-right: 0;
   }
 
-  .section-how__step {
-    padding-top: 322px;
-    background-position: top;
-    background-size: 100% 284px;
+  .step__img-container {
+    position: static;
+    margin-bottom: 38px;
+    width: 100%;
+    height: 284px;
+    border-radius: 24px;
+  }
+
+  .step__content_img {
     border-radius: 24px;
   }
 
   .step__text {
     margin-bottom: 25px;
+  }
+
+  .section-how__buttons {
+    position: static;
   }
 
   br {
@@ -1350,12 +1434,35 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 35px;
   }
 
-  .section-hero__wrapper {
-    padding: 160px 77px 30px 77px;
+  .swiper {
+    max-height: 668px;
+    height: 668px;
+  }
+
+  .swiper-slide {
+    max-height: 668px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
   }
 
   .section-hero__content {
-    margin-bottom: 115px;
+    max-width: 770px;
+  }
+
+  .section-hero__wrapper {
+    bottom: 160px;
+    left: 0;
+    right: 0;
+    max-width: 924px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding: 160px 77px 0 77px;
   }
 
   .section-hero__heading {
@@ -1427,21 +1534,34 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 50px;
   }
 
-  .steps__item:not(:last-child) {
+  .tabs__step:not(:last-child) {
     margin-right: 86px;
   }
 
-  .steps__item:first-child {
+  .tabs__step:first-child {
     margin-right: 85px;
   }
 
-  .section-how__step {
-    padding-right: 487px;
-    background-size: 437px 689px;
+  .section-how__content {
+    min-height: 689px;
+  }
+
+  .step__content {
+    max-width: 576px;
   }
 
   .step__description {
-    max-width: 576px;
+    margin-right: 50px;
+    max-width: 437px;
+  }
+
+  .step__img-container {
+    width: 437px;
+    height: 689px;
+  }
+
+  .step__content_img {
+    border-radius: 32px;
   }
 
   .step__text {
@@ -1504,15 +1624,15 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 50px;
   }
 
-  .steps__item:not(:last-child) {
+  .tabs__step:not(:last-child) {
     margin-right: 86px;
   }
 
-  .steps__item:first-child {
+  .tabs__step:first-child {
     margin-right: 85px;
   }
 
-  .step__description {
+  .step__content {
     max-width: none;
   }
 

@@ -10,6 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Евклид</title>
@@ -113,27 +122,66 @@
       <section class="section-how-do-we-work">
         <div class="container section-how__container">
           <h2 class="section__heading section-how__heading">Как мы работаем</h2>
-          <ul class="section-how__steps">
-            <li class="steps__item">
-              <a href="#" class="steps__link">1 шаг</a>
-            </li>
-            <li class="steps__item">
-              <a href="#" class="steps__link">2 шаг</a>
-            </li>
-            <li class="steps__item">
-              <a href="#" class="steps__link">3 шаг</a>
-            </li>
-            <li class="steps__item">
-              <a href="#" class="steps__link">4 шаг</a>
-            </li>
+          <ul class="section-how__tabs">
+            <li class="tabs__step tabs__active" data-tab="one">1 шаг</li>
+            <li class="tabs__step" data-tab="two">2 шаг</li>
+            <li class="tabs__step" data-tab="three">3 шаг</li>
+            <li class="tabs__step" data-tab="four">4 шаг</li>
           </ul>
-          <div class="section-how__step">
-            <div class="step__description">
-                <h3 class="step__title">Проводим консультацию</h3>
-                <p class="step__text">Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. <br>
-                А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
-                целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом,
-                однако конкретные выводы, разумеется, призваны к ответу.</p>
+          <div class="section-how__content">
+            <div class="section-how__step">
+              <div class="step__content step__content_active" data-step="one">
+                <div class="step__content-wrapper">
+                  <div class="step__description">
+                    <h3 class="step__title">Проводим консультацию</h3>
+                    <p class="step__text">Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. <br>
+                    А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты
+                    целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом,
+                    однако конкретные выводы, разумеется, призваны к ответу.</p>
+                  </div>
+                  <div class="step__img-container">
+                    <img src="img/how-step1.jpg" class="step__content_img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="step__content" data-step="two">
+                <div class="step__content-wrapper">
+                  <div class="step__description">
+                    <h3 class="step__title">Составляем смету</h3>
+                    <p class="step__text">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных
+                    социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
+                  </div>
+                  <div class="step__img-container">
+                    <img src="img/how-step2.jpg" class="step__content_img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="step__content" data-step="three">
+                <div class="step__content-wrapper">
+                  <div class="step__description">
+                    <h3 class="step__title">Привлекаем подрядчиков</h3>
+                    <p class="step__text">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого
+                    факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание
+                    показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.</p>
+                  </div>
+                  <div class="step__img-container">
+                    <img src="img/how-step3.jpg" class="step__content_img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="step__content" data-step="four">
+                <div class="step__content-wrapper">
+                  <div class="step__description">
+                    <h3 class="step__title">Инспектируем все этапы работ</h3>
+                    <p class="step__text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт
+                    говорит нам, что новая модель организационной деятельности говорит 
+                    о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
+                  </div>
+                  <div class="step__img-container">
+                    <img src="img/how-step4.jpg" class="step__content_img" alt="">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="section-how__buttons">
               <a href="#" class="section__btn section-how__btn section-how__btn_more">Подробнее</a>
@@ -145,6 +193,95 @@
       <section class="section-questions">
         <div class="container section-questions__container">
           <h2 class="section__heading section-questions__heading">Часто задаваемые вопросы</h2>
+
+          <div id="accordion" class="section-questions__list">
+            <div class="section-questions__list-item">
+              <h3 class="section-questions__question">Из чего формируется конечная стоимость проекта?</h3>
+              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+              </svg>
+            </div>
+            <div>
+              <p>
+              Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+              ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+              amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+              odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+              </p>
+            </div>
+            <div class="section-questions__list-item">
+              <h3 class="section-questions__question">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</h3>
+              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+              </svg>
+            </div>
+            <div>
+              <p>
+              Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+              purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+              velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+              suscipit faucibus urna.
+              </p>
+            </div>
+            <div class="section-questions__list-item">
+              <h3 class="section-questions__question">Я выбираю между разными компаниями. В чём ваше отличие?</h3>
+              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+              </svg>
+            </div>
+            <div>
+              <p>
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+              Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+              ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+              lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+              </p>
+            </div>
+            <div class="section-questions__list-item">
+              <h3 class="section-questions__question"><span class="section-questions__span">Могу ли я делегировать</span> <span class="section-questions__span"> вам работу / согласование </span> с подрядчиком / организацией?</h3>
+              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+              </svg>
+            </div>
+            <div>
+              <p>
+              Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+              et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+              mauris vel est.
+              </p>
+              <p>
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+              </p>
+            </div>
+            <div class="section-questions__list-item">
+              <h3 class="section-questions__question"><span class="section-questions__span">Могу ли я вернуть деньги</span> на каком-либо из этапов работ?</h3>
+              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
+              </svg>
+            </div>
+            <div>
+              <p>
+              Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+              et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+              mauris vel est.
+              </p>
+              <p>
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+              </p>
+            </div>
+          </div>
+
           <ul class="section-questions__list">
             <li class="section-questions__list-item">
               <p class="section-questions__question">Из чего формируется конечная стоимость проекта?</p>
