@@ -6,18 +6,7 @@ const swiper = new Swiper('.swiper', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+  }
 });
 
 let tabs = document.querySelectorAll('.tabs__step'),
@@ -36,3 +25,5 @@ tabs.forEach(function(tab) {
     document.querySelector(`[data-step="${tabData}"]`).classList.add('step__content_active');
   });
 });
+
+document.querySelector('.ui-accordion-content').removeAttribute(height)
