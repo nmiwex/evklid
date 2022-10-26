@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -37,6 +37,33 @@
             <rect class="burger__line_2" y="20" width="30" height="3" fill="black"/>
           </svg>
         </a>
+        <div class="section-header__modal" style="display: none; transition: display .3s ease;">
+          <div class="modal__content">
+            <button class="modal__close">
+              <svg class="modal__close__svg" width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333"/>
+                <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333"/>
+              </svg>
+            </button>
+            <ul class="section-header__modal-list">
+              <li class="modal__item">
+                <a href="#" class="modal__link">О нас</a> 
+              </li>
+              <li class="modal__item">
+                <a href="#" class="modal__link">Проекты</a> 
+              </li>
+              <li class="modal__item">
+                <a href="#" class="modal__link">Этапы</a> 
+              </li>
+              <li class="modal__item">
+                <a href="#" class="modal__link">Отзывы</a> 
+              </li>
+              <li class="modal__item">
+                <a href="#" class="modal__link">Контакты</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
         <a href="#" class="section-header__logo"><img src="img/Logo-header.svg" class="section-header__logo-img" alt="evklid-logo"></a>
         <ul class="section-header__nav-list">
           <li class="nav-list__item">
@@ -95,7 +122,9 @@
           прототип будущего проекта способствует повышению качества экспериментов.</p>
         <div class="section-about__bottom">
           <div class="section-about__left">
-            <img src="img/Rectangle 2.jpg" class="section-about__img" alt="">
+            <div class="section-about__img-wrapper">
+              <img src="img/Rectangle 2.jpg" class="section-about__img" alt="">
+            </div>
             <div class="section-about__left-wrapper">
               <p class="section-about__left-text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов</p>
               <a href="#" class="section-about__btn">Подробнее</a>
@@ -309,44 +338,6 @@
               </p>
             </div>
           </div>
-
-          <!-- <ul class="section-questions__list">
-            <li class="section-questions__list-item">
-              <p class="section-questions__question">Из чего формируется конечная стоимость проекта?</p>
-              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
-              </svg>
-            </li>
-            <li class="section-questions__list-item">
-              <p class="section-questions__question">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p>
-              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
-              </svg>
-            </li>
-            <li class="section-questions__list-item">
-              <p class="section-questions__question">Я выбираю между разными компаниями. В чём ваше отличие?</p>
-              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
-              </svg>
-            </li>
-            <li class="section-questions__list-item">
-              <p class="section-questions__question"><span class="section-questions__span">Могу ли я делегировать</span> <span class="section-questions__span"> вам работу / согласование </span> с подрядчиком / организацией?</p>
-              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
-              </svg>
-            </li>
-            <li class="section-questions__list-item">
-              <p class="section-questions__question"><span class="section-questions__span">Могу ли я вернуть деньги</span> на каком-либо из этапов работ?</p>
-              <svg class="section-questions__svg" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="black"/>
-              </svg>
-            </li>
-          </ul> -->
         </div>
       </section>
   </main>

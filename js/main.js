@@ -26,4 +26,16 @@ tabs.forEach(function(tab) {
   });
 });
 
-document.querySelector('.ui-accordion-content').removeAttribute(height)
+let burger = document.querySelector('.section-header__burger'),
+    modal = document.querySelector('.section-header__modal'),
+    modalClose = document.querySelector('.modal__close');
+
+burger.addEventListener('click', function() {
+  modal.style.display = "block"
+  // modal.classList.add('section-header__modal_active');
+})
+
+modalClose.addEventListener('click', function() {
+  modal.style.display = "none"
+  // modal.classList.remove('section-header__modal_active');
+})
