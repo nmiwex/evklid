@@ -37,7 +37,7 @@
             <rect class="burger__line_2" y="20" width="30" height="3" fill="black"/>
           </svg>
         </a>
-        <div class="section-header__modal" style="display: none; transition: display .3s ease;">
+        <div class="section-header__modal">
           <div class="modal__content">
             <button class="modal__close">
               <svg class="modal__close__svg" width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,10 +82,27 @@
             <a href="#" class="nav-list__link">Контакты</a> 
           </li>
         </ul>
+
         <button class="section-header__search"><svg class="section-header__search-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
           <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
           </svg></button>
+
+          <form action="#" class="section-header__search-form" id="search-form">
+            <input type="search" class="search-form__input" id="search-form__input" placeholder="Что будем искать?">
+            <button class="section-header__search search-form__search" id="search-form__search"><svg class="section-header__search-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
+              <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
+              </svg></button>
+            <button class="search-form__close" id="search-form__close">
+              <svg class="search-form__close-svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="#CACACA"/>
+                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="#CACACA"/>
+                <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+              </svg>
+            </button>
+          </form>
+
       </div>
     </div>
   </header>

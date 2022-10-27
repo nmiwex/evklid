@@ -9,6 +9,8 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
+// табы
+
 let tabs = document.querySelectorAll('.tabs__step'),
     contents = document.querySelectorAll('.step__content');
 tabs.forEach(function(tab) {
@@ -26,16 +28,31 @@ tabs.forEach(function(tab) {
   });
 });
 
+// бургер 
+
 let burger = document.querySelector('.section-header__burger'),
     modal = document.querySelector('.section-header__modal'),
     modalClose = document.querySelector('.modal__close');
 
 burger.addEventListener('click', function() {
-  modal.style.display = "block"
-  // modal.classList.add('section-header__modal_active');
+  modal.classList.add('section-header__modal_active');
 })
 
 modalClose.addEventListener('click', function() {
-  modal.style.display = "none"
-  // modal.classList.remove('section-header__modal_active');
+  modal.classList.remove('section-header__modal_active');
 })
+
+// форма поиск
+
+let searchForm = document.querySelector('#search-form'),
+    searchBtnOpen = document.querySelector('.section-header__search'),
+    searchBtn = document.querySelector('#search-form__search'),
+    searchBtnClose = document.querySelector('#search-form__close');
+searchBtnOpen.addEventListener('click', function(el) {
+  searchForm.classList.add('section-header__search-form-active');
+  searchBtnOpen.classList.add('section-header__search-close')
+});
+searchBtnClose.addEventListener('click', function() {
+  searchForm.classList.remove('section-header__search-form-active');
+  searchBtnOpen.classList.remove('section-header__search-close')
+});
