@@ -5,6 +5,10 @@
   --CACACA: #CACACA;
 }
 
+::selection {
+  background: rgba(255, 184, 77, .4);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -59,26 +63,28 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-header__burger {
   display: none;
+  padding: 2px;
 }
 
-.section-header__burger:focus {
-  padding: 3px;
-  outline: none;
-  border: 2px solid var(--FF9900);
+.section-header__burger:focus-visible {
+  outline: 2px solid var(--FF9900);
 }
 
 .section-header__burger:active .burger__svg rect {
   fill: var(--E1670E);
+  transition: none;
 }
 
 .section-header__burger:active .burger__line_1 {
-  x: 5px;
+  transform: translateX(5px);
   width: 25px;
+  transition: none;
 }
 
 .section-header__burger:active .burger__line_2 {
-  x: 12px;
+  transform: translateX(12px);
   width: 18px;
+  transition: none;
 }
 
 .section-header__logo {
@@ -90,7 +96,6 @@ p, h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   visibility: hidden;
-  
   opacity: 0;
   z-index: 2;
   width: 100%;
@@ -143,6 +148,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-list__link {
+  padding: 2px;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -157,15 +163,14 @@ p, h1, h2, h3, h4, h5, h6 {
   border-color: var(--FF9900);
 }
 
-.nav-list__link:focus {
-  padding: 3px;
-  outline: none;
-  border: 2px solid var(--FF9900);
+.nav-list__link:focus-visible {
+  outline: 2px solid var(--FF9900);
 }
 
 .nav-list__link:active {
   color: var(--E1670E);
   border-bottom: 2px solid var(--E1670E);
+  transition: none;
 }
 
 .section-header__search-form {
@@ -234,10 +239,28 @@ p, h1, h2, h3, h4, h5, h6 {
   fill: var(--FF9900);
 }
 
-.section-header__search:focus, .search-form__close:focus {
-  max-height: 32px;
-  padding: 2px 2px 0 2px;
+.section-header__search:focus-visible, .search-form__close:focus-visible {
   outline: 2px solid var(--FF9900);
+}
+
+.section-header__search:active .section-header__search-svg path {
+  stroke: var(--FF9900);
+  transition: none;
+}
+
+.section-header__search:active .section-header__search-svg rect {
+  fill: var(--FF9900);
+  transition: none;
+}
+
+.search-form__close:active .search-form__close-svg circle {
+  stroke: #000;
+  transition: none;
+}
+
+.search-form__close:active .search-form__close-svg rect {
+  fill: #000;
+  transition: none;
 }
 
 /*hero*/
@@ -297,13 +320,14 @@ p, h1, h2, h3, h4, h5, h6 {
   transition: background .3s ease;
 }
 
-.section__btn:hover, .section__btn:focus {
+.section__btn:hover, .section__btn:focus-visible {
   outline: none;
   background: var(--FFB84D);
 }
 
 .section__btn:active {
   background: var(--E1670E);
+  transition: none;
 }
 
 
@@ -380,7 +404,7 @@ p, h1, h2, h3, h4, h5, h6 {
   transition-timing-function: ease;
 }
 
-.section-about__btn:hover, .section-about__btn:focus {
+.section-about__btn:hover, .section-about__btn:focus-visible {
   background: var(--FF9900);
   outline: none;
   color: #fff;
@@ -390,6 +414,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background: var(--E1670E);
   border-color: var(--E1670E);
   color: #fff;
+  transition: none;
 }
 
 .section-about__right {
@@ -458,11 +483,13 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 45px;
 }
 
-.tabs__step {
+.tabs__btn {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000;
+  background: transparent;
+  border: none;
   cursor: pointer;
   transition: color .3s ease;
 }
@@ -479,18 +506,17 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-right: 85px;
 }
 
-.tabs__step:hover {
+.tabs__step:hover .tabs__btn {
   color: var(--FF9900);
 }
 
-.tabs__step:focus {
-  padding: 3px;
-  outline: none;
-  border: 2px solid var(--FF9900);
+.tabs__btn:focus-visible {
+  outline: 2px solid var(--FF9900);
 }
 
-.tabs__step:active {
+.tabs__step:active .tabs__btn {
   color: var(--E1670E);
+  transition: none;
 }
 
 .section-how__content {
@@ -565,7 +591,7 @@ p, h1, h2, h3, h4, h5, h6 {
   transition-timing-function: ease;
 }
 
-.section-how__btn_treaty:hover, .section-how__btn_treaty:focus {
+.section-how__btn_treaty:hover, .section-how__btn_treaty:focus-visible {
   outline: none;
   background: #666;
   border-color: #666;
@@ -576,6 +602,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background: #000;
   border-color: #000;
   color: #fff;
+  transition: none;
 }
 
 /* questions*/
@@ -590,6 +617,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-questions__list {
   border-bottom: 1px solid var(--CACACA);
+  border-collapse: collapse;
 }
 
 .section-questions__list-item, .ui-state-default {
@@ -598,7 +626,8 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   background: transparent;
   border: none;
-  border-top: .5px solid var(--CACACA);
+  border-top: 1px solid var(--CACACA);
+  border-collapse: collapse;
   transition: border-color .3s ease;
 }
 
@@ -618,7 +647,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-questions__answer {
   color: #000;
   border: none;
-  border-bottom: .5px solid var(--CACACA);
+  border-bottom: 1px solid var(--CACACA);
 }
 
 .section-questions__question {
@@ -685,10 +714,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-questions__list-item:focus .section-questions__svg {
   transform: rotate(45deg);
 }
-
-/* .section-questions__list-item:active .section-questions__svg {
-  transform: rotate(45deg);
-} */
 
 /* footer*/ 
 
@@ -823,6 +848,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+  cursor: pointer;
   color: var(--CACACA);
 }
 
@@ -844,31 +870,29 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--FF9900);
 }
 
-.connection__link:focus {
-  padding: 0 3px;
-  outline: none;
-  border: 2px solid var(--FF9900);
+.connection__link:focus-visible {
+  outline: 2px solid var(--FF9900);
 }
 
 .connection__link:active {
   color: var(--E1670E);
+  transition: none;
 }
 
 .connection__social:hover .social__svg path {
   fill: var(--FF9900);
 }
 
-.connection__social:focus {
-  padding: 3px 3px 0 3px;
-  outline: none;
-  border: 2px solid var(--FF9900);
+.connection__social:focus-visible {
+  outline: 2px solid var(--FF9900);
 }
 
 .connection__social:active .social__svg path {
   fill: var(--E1670E);
+  transition: none;
 }
 
-.form__input:hover, .form__input:focus, .form__input:active {
+.form__input:hover, .form__input:focus-visible, .form__input:active {
   background: #666;
   outline: none;
 }

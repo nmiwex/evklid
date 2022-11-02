@@ -11,7 +11,7 @@ const swiper = new Swiper('.swiper', {
 
 // табы
 
-let tabs = document.querySelectorAll('.tabs__step'),
+let tabs = document.querySelectorAll('.tabs__btn'),
     contents = document.querySelectorAll('.step__content');
 tabs.forEach(function(tab) {
   tab.addEventListener('click', e => {
